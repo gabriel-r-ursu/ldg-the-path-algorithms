@@ -1,4 +1,6 @@
 const LinkedList = require('../../../../src/LinkedList/pairs/gabriel-adrian/LinkedList')
+const ListNode = require('../../../../src/LinkedList/pairs/gabriel-adrian/LinkedList')
+
 
 describe('LinkedList', () => {
 
@@ -7,12 +9,13 @@ describe('LinkedList', () => {
         expect(list).toBeDefined()
     })
 
-    test('can I add an input?', () => {
-        const list = new LinkedList()
-        expect(list.addElement(100)).toEqual(100)
+    test('add new Node', () => {
+        const node = new ListNode(1);
+        const list = new LinkedList();
+        expect(list.addElement(node)).toBe(1);
     })
 
-    
+
 
 })
 
