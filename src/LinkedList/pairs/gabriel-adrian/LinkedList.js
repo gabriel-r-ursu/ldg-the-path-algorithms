@@ -5,7 +5,10 @@ class LinkedList {
     }
 
     addElement(value) {
-
+        const test = new ListNode(value);
+        this.head = test;
+        this.size += 1;
+        return this;
     }
 }
 

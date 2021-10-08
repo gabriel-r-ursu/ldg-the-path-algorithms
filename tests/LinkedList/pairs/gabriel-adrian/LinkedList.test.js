@@ -10,9 +10,8 @@ describe('LinkedList', () => {
     })
 
     test('add new Node', () => {
-        const node = new ListNode(1);
         const list = new LinkedList();
-        expect(list.addElement(node)).toBe(1);
+        expect(list.addElement(1)).toEqual({"head": {"data": 1, "next": null}, "size": 1, "tail": null});
     })
 
 
