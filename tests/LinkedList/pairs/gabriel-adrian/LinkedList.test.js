@@ -12,5 +12,7 @@ describe('LinkedList', () => {
         expect(list.addElement(100)).toEqual(100)
     })
 
+    
+
 })
 
