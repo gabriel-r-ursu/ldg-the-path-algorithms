@@ -23,12 +23,24 @@ class LinkedList {
         return this.size;
     }
 
+    getNthNode(query){
+        if(query <= 0) throw new Error('Must be a query starting from one');
+        if(query > this.size) throw new Error('Out of bounds!');
+        
+        let currentItem = this.head;
+        let counter = 1;
+        while(counter <= query) {
+            if(counter === query) return currentItem.data;
+            currentItem = currentItem.next;
+            counter++;
+        }
+    }
+
     clearList() {
         this.size = 0;
         this.head = this.tail = null;
         return this.head;
     }
-
 }
 
 class ListNode {

@@ -30,25 +30,24 @@ describe('LinkedList', () => {
         expect(list.getSizeList()).toEqual(list.size);
     })
 
+    test('get nth node from the list', () => {
+        expect(list.getNthNode(3)).toEqual(10);
+    })
+
+    test('throws error if search is out of bounds', () => {
+        expect(() => {list.getNthNode(100)}).toThrow();
+    })
+
+    test('throws error if input is a negative number', () => {
+        expect(() => {list.getNthNode(-4)}).toThrow();
+    })
+
+    test('deletes a certain node', () => {
+        expect(list.removeElement(2)).toEqual(list.size - 1);
+    })
+
     test('clear out the list', () => {
         expect(list.clearList()).toEqual(null);
     })
-
-    // test('get the first node value', () => {
-    //     expect(list.getLastNode()).toEqual(list.head.data);
-    // })
-
-    // test('get the last node value', () => {
-    //     expect(list.getFirstNode().toEqual(list.tail.data));
-    // })
-
-    // test('get the first node', () => {
-    //     expect(list.getLastNode().toEqual(list.head));
-    // })
-
-    // test('get the last node', () => {
-    //     expect(list.getFirstNode().toEqual(list.tail));
-    // })
-
 })
 
