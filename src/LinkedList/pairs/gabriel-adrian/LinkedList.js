@@ -5,17 +5,25 @@ class LinkedList {
     }
 
     addElement(value) {
-        const test = new ListNode(value);
-        this.head = test;
-        this.size += 1;
-        return this;
+        const node = new ListNode(value);
+        this.size++;
+
+        if (!this.head){
+            this.head = node;
+        } else {
+            this.tail.next = node;
+        }
+        this.tail = node;
+        console.log(list.head, list.tail);
+        
+        return this.head.data;
     }
 }
 
 class ListNode {
     constructor(data) {
         this.data = data;
-        this.next = null ;               
+        this.next = null;
     }
 }
 
