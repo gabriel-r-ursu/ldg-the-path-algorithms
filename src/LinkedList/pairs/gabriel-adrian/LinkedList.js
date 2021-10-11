@@ -15,11 +15,8 @@ class LinkedList {
             this.tail.next = node;
         }
         this.tail = node;
-        console.log("THIS IS LIST: ",this.head, this.tail);
-
-        console.log("THIS IS NODE: ", node);
         
-        return this.head.data;
+        return this.size;
     }
 }
 

@@ -15,15 +15,15 @@ describe('LinkedList', () => {
     })
 
     test('updates the next element accordingly', () => {
-        expect(list.addElement(2).toEqual(2));
+        expect(list.addElement(2)).toEqual(2);
     })
 
     test('updates the next element accordingly', () => {
-        expect(list.addElement(3).toEqual(3));
+        expect(list.addElement(3)).toEqual(3);
     })
 
     test('updates the next element accordingly', () => {
-        expect(list.addElement(4).toEqual(4));
+        expect(list.addElement(4)).toEqual(4);
     })
 
     test('get the size of the LinkedList', () => {
