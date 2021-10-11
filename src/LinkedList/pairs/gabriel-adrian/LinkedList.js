@@ -18,6 +18,10 @@ class LinkedList {
         
         return this.size;
     }
+
+    getSizeList() {
+        return this.size;
+    }
 }
 
 class ListNode {
