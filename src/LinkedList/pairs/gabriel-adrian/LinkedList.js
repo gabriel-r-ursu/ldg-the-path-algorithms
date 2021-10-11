@@ -36,6 +36,15 @@ class LinkedList {
         }
     }
 
+    popNode() {
+        console.log(this.size);
+        this.tail.data = this.getNthNode(this.size - 1);
+        this.tail.next = null;
+        --this.size;
+
+        return this.size;
+    }
+
     clearList() {
         this.size = 0;
         this.head = this.tail = null;

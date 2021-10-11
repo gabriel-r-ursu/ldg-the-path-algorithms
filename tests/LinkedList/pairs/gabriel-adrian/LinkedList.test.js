@@ -42,8 +42,12 @@ describe('LinkedList', () => {
         expect(() => {list.getNthNode(-4)}).toThrow();
     })
 
+    test('remove the last node from linkedList', () => {
+        expect(list.popNode()).toEqual(3);
+    })
+
     test('deletes a certain node', () => {
-        expect(list.removeElement(2)).toEqual(list.size - 1);
+        expect(list.removeElement(1)).toEqual(list.size);
     })
 
     test('clear out the list', () => {
