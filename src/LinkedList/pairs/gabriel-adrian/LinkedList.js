@@ -1,3 +1,4 @@
+
 class LinkedList {
     constructor() {
         this.head = this.tail = null;
@@ -14,7 +15,9 @@ class LinkedList {
             this.tail.next = node;
         }
         this.tail = node;
-        console.log(list.head, list.tail);
+        console.log("THIS IS LIST: ",this.head, this.tail);
+
+        console.log("THIS IS NODE: ", node);
         
         return this.head.data;
     }

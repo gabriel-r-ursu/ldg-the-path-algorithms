@@ -25,5 +25,30 @@ describe('LinkedList', () => {
     test('updates the next element accordingly', () => {
         expect(list.addElement(4).toEqual(4));
     })
+
+    test('get the size of the LinkedList', () => {
+        expect(list.getSizeList().toEqual(list.length));
+    })
+
+    test('clear out the list', () => {
+        expect(list.clearList().toEqual(null));
+    })
+
+    test('get the first node value', () => {
+        expect(list.getLastNode().toEqual(list.head.data));
+    })
+
+    test('get the last node value', () => {
+        expect(list.getFirstNode().toEqual(list.tail.data));
+    })
+
+    test('get the first node', () => {
+        expect(list.getLastNode().toEqual(list.head));
+    })
+
+    test('get the last node', () => {
+        expect(list.getFirstNode().toEqual(list.tail));
+    })
+
 })
 
