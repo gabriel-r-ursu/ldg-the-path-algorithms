@@ -22,6 +22,13 @@ class LinkedList {
     getSizeList() {
         return this.size;
     }
+
+    clearList() {
+        this.size = 0;
+        this.head = this.tail = null;
+        return this.head;
+    }
+
 }
 
 class ListNode {
