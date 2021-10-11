@@ -1,11 +1,10 @@
-
 class LinkedList {
     constructor() {
         this.head = this.tail = null;
         this.size = 0;
     }
 
-    addElement(value) {
+    pushNode(value) {
         const node = new ListNode(value);
         this.size++;
 
@@ -19,7 +18,11 @@ class LinkedList {
         return this.size;
     }
 
-    getSizeList() {
+    popNode() {
+        this.tail.data = this.getNthNode(this.size - 1);
+        this.tail.next = null;
+        --this.size;
+
         return this.size;
     }
 
@@ -36,12 +39,7 @@ class LinkedList {
         }
     }
 
-    popNode() {
-        console.log(this.size);
-        this.tail.data = this.getNthNode(this.size - 1);
-        this.tail.next = null;
-        --this.size;
-
+    getListSize() {
         return this.size;
     }
 

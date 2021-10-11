@@ -1,33 +1,30 @@
 const LinkedList = require('../../../../src/LinkedList/pairs/gabriel-adrian/LinkedList')
-const ListNode = require('../../../../src/LinkedList/pairs/gabriel-adrian/LinkedList')
-
 
 describe('LinkedList', () => {
     const list = new LinkedList();
 
     test('can create a new list', () => {
-        expect(list).toBeDefined()
+        expect(list).toBeDefined();
     })
 
     test('adding a node in the LinkedList', () => {
-        // const list = new LinkedList();
-        expect(list.addElement(1)).toEqual(1);
+        expect(list.pushNode(1)).toEqual(1);
     })
 
     test('adding a node in the LinkedList', () => {
-        expect(list.addElement(5)).toEqual(2);
+        expect(list.pushNode(5)).toEqual(2);
     })
 
     test('adding a node in the LinkedList', () => {
-        expect(list.addElement(10)).toEqual(3);
+        expect(list.pushNode(10)).toEqual(3);
     })
 
     test('adding a node in the LinkedList', () => {
-        expect(list.addElement(3)).toEqual(4);
+        expect(list.pushNode(3)).toEqual(4);
     })
 
     test('get the size of the LinkedList', () => {
-        expect(list.getSizeList()).toEqual(list.size);
+        expect(list.getListSize()).toEqual(list.size);
     })
 
     test('get nth node from the list', () => {
@@ -44,10 +41,6 @@ describe('LinkedList', () => {
 
     test('remove the last node from linkedList', () => {
         expect(list.popNode()).toEqual(3);
-    })
-
-    test('deletes a certain node', () => {
-        expect(list.removeElement(1)).toEqual(list.size);
     })
 
     test('clear out the list', () => {
